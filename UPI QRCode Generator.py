@@ -27,7 +27,6 @@ class Frames(object):
                 Messagebox.showinfo('Status',"Error! Payee Name cannot be empty")
                 return
             
-            amount=float(am)
             address=pa+'@'+upi
             img=qrcode.make('upi://pay?pa={}&pn={}&am={}&tn={}'.format(address,pn,am,tn))
             img.save('upi_qrcode.png')
@@ -63,7 +62,7 @@ class Frames(object):
         Entry2=Entry(root,width=30,textvariable=self.query3,font=('bold',15))
         Entry2.place(x=50,y=300)
 
-        Label3=Label(root,text='Enter Amount (optional)',bg='pink',font=('bold',15))
+        Label3=Label(root,text='Enter Amount (required)',bg='pink',font=('bold',15))
         Label3.place(x=50,y=340)
         L3=Label(root,text= '₹',bg='pink',font=('bold',20))
         L3.place(x=50,y=365)

@@ -41,7 +41,7 @@ class Frames(object):
             qr.show()
             
         except Exception as e:
-            Messagebox.showinfo('Status',"Error occured!!")
+            Messagebox.showinfo('Error',"Error occured!!")
 
     def mainframe(self,root):
         L1=Label(root, text='QR Code Generator',bg='pink',font=('bold',25))
